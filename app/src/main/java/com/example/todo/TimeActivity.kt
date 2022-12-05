@@ -48,17 +48,17 @@ class TimeActivity : AppCompatActivity() {
                 when (selected) {
                     0 -> {
                         textFirst.text = "%.3f".format(num_value).toString() + " Сек"
-                        textSecond.text = "%.3f".format(num_value/100).toString() + " Мин"
-                        textThird.text = "%.3f".format(num_value/100/1000).toString() + " Ч"
+                        textSecond.text = "%.3f".format(num_value / 60).toString() + " Мин"
+                        textThird.text = "%.3f".format(num_value / 60 / 60).toString() + " Ч"
                     }
                     1 -> {
-                        textFirst.text = "%.3f".format(num_value * 100).toString() + " Сек"
+                        textFirst.text = "%.3f".format(num_value * 60).toString() + " Сек"
                         textSecond.text = (num_value).toString() + " Мин"
-                        textThird.text = "%.3f".format(num_value/1000).toString() + " Ч"
+                        textThird.text = "%.3f".format(num_value / 60).toString() + " Ч"
                     }
                     2 -> {
-                        textFirst.text = "%.3f".format(num_value * 1000 * 100 ).toString() + " Сек"
-                        textSecond.text = "%.3f".format(num_value * 1000).toString() + " Мин"
+                        textFirst.text = "%.3f".format(num_value * 60 * 60 ).toString() + " Сек"
+                        textSecond.text = "%.3f".format(num_value * 60).toString() + " Мин"
                         textThird.text = "%.3f".format(num_value).toString() + " Ч"
                     }
                 }
