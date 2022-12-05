@@ -14,10 +14,22 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, TemperatureActivity::class.java)
             startActivity(intent);
         }
-        imageTime.setOnClickListener{}
-        imageSpeed.setOnClickListener{}
-        imageLength.setOnClickListener{}
-        imageWeight.setOnClickListener{}
+        imageTime.setOnClickListener{
+            val intent = Intent(this, TimeActivity::class.java)
+            startActivity(intent);
+        }
+        imageSpeed.setOnClickListener{
+            val intent = Intent(this, SpeedActivity::class.java)
+            startActivity(intent);
+        }
+        imageLength.setOnClickListener{
+            val intent = Intent(this, LengthActivity::class.java)
+            startActivity(intent);
+        }
+        imageWeight.setOnClickListener{
+            val intent = Intent(this, WeightActivity::class.java)
+            startActivity(intent);
+        }
     }
 
 }

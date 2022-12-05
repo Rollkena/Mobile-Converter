@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">ToDo</string>
+    <string-array name="LengthArr">
+        <item>См</item>
+        <item>М</item>
+        <item>Км</item>
+    </string-array>
+    <string-array name="SpeedArr">
+        <item>Км/ч</item>
+        <item>М/c</item>
+    </string-array>
+    <string-array name="TemperatureArr">
+        <item>°C</item>
+        <item>K</item>
+        <item>°F</item>
+    </string-array>
+    <string-array name="TimeArr">
+        <item>Сек</item>
+        <item>Мин</item>
+        <item>Ч</item>
+    </string-array>
+    <string-array name="WeightArr">
+        <item>Кг</item>
+        <item>Т</item>
+        <item>Цт</item>
+    </string-array>
 </resources>

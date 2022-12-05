@@ -4,12 +4,12 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_speed.*
+import kotlinx.android.synthetic.main.activity_lenght.*
 
-class TimeActivity : AppCompatActivity() {
+class LengthActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_time)
+        setContentView(R.layout.activity_lenght)
         //завершение программы
         btn_back.setOnClickListener{finish()}
         //цифры
@@ -47,19 +47,19 @@ class TimeActivity : AppCompatActivity() {
                 val selected: Int = spinner.selectedItemPosition
                 when (selected) {
                     0 -> {
-                        textFirst.text = "%.3f".format(num_value).toString() + " Сек"
-                        textSecond.text = "%.3f".format(num_value/100).toString() + " Мин"
-                        textThird.text = "%.3f".format(num_value/100/1000).toString() + " Ч"
+                        textFirst.text = "%.3f".format(num_value).toString() + " См"
+                        textSecond.text = "%.3f".format(num_value/100).toString() + " М"
+                        textThird.text = "%.3f".format(num_value/100/1000).toString() + " Км"
                     }
                     1 -> {
-                        textFirst.text = "%.3f".format(num_value * 100).toString() + " Сек"
-                        textSecond.text = (num_value).toString() + " Мин"
-                        textThird.text = "%.3f".format(num_value/1000).toString() + " Ч"
+                        textFirst.text = "%.3f".format(num_value * 100).toString() + " См"
+                        textSecond.text = (num_value).toString() + " М"
+                        textThird.text = "%.3f".format(num_value/1000).toString() + " Км"
                     }
                     2 -> {
-                        textFirst.text = "%.3f".format(num_value * 1000 * 100 ).toString() + " Сек"
-                        textSecond.text = "%.3f".format(num_value * 1000).toString() + " Мин"
-                        textThird.text = "%.3f".format(num_value).toString() + " Ч"
+                        textFirst.text = "%.3f".format(num_value * 1000 * 100 ).toString() + " См"
+                        textSecond.text = "%.3f".format(num_value * 1000).toString() + " М"
+                        textThird.text = "%.3f".format(num_value).toString() + " Км"
                     }
                 }
             }
@@ -68,6 +68,7 @@ class TimeActivity : AppCompatActivity() {
             }
         }
     }
+
     //добавляем 1 символ в поле
     fun setTextFields(str: String){
         textValue.append(str)

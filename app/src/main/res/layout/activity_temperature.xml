@@ -11,11 +11,11 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width = "match_parent"
+        android:layout_width="match_parent"
         android:layout_height="60sp"
         android:background="@color/dark_purple"
         android:gravity="center"
-        android:text="Length"
+        android:text="Temperature"
         android:textColor="@color/black"
         android:textSize="30sp" />
 
@@ -34,22 +34,22 @@
             android:layout_height="50dp"
             android:background="@drawable/my_border"
             android:gravity="center"
-            android:textSize="25sp"
-            />
+            android:textSize="25sp" />
 
         <TextView
             android:id="@+id/textVoid2"
             android:layout_width="20sp"
             android:layout_height="20sp"
             android:gravity="center" />
+
         <Spinner
             android:id="@+id/spinner"
             android:layout_width="128dp"
             android:layout_height="wrap_content"
             android:background="@drawable/my_border"
+            android:entries="@array/TemperatureArr"
             android:padding="15sp"
-            android:entries="@array/LengthArr"
-            android:textAlignment="center"/>
+            android:textAlignment="center" />
     </LinearLayout>
 
     <LinearLayout
@@ -208,8 +208,15 @@
             android:layout_weight="1">
             <TextView
                 style="@style/NumberButton"
+                android:text="-"
+                android:layout_weight="1"
+                android:background="@drawable/my_border_number"
+                android:id="@+id/btn_minus"
+                />
+            <TextView
+                style="@style/NumberButton"
                 android:text="0"
-                android:layout_weight="2"
+                android:layout_weight="1"
                 android:background="@drawable/my_border_number"
                 android:id="@+id/btn_zero"
                 />
